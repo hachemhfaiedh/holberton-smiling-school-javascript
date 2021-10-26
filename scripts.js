@@ -113,61 +113,13 @@ $(document).ready(function() {
         }
     });
 
-    // $("#user_search").change(filterKeywoard())
     $("#user_search").on('change', function() {
         let value = $(this).val()
         let topic = 
         $.get("https://smileschool-api.hbtn.info/courses", (data) => {
             for (let k = 0; k < data.courses.length; k++) {
                 let course = data.courses[k];
-                // starsHTML = ""
-                // for (let j = 0; j < 5; j++) {
-                //     if (j < course.star) {
-                //         starHTML = '<img src="./images/star_on.png" class="mr-1 carousel-star-icon" alt="star icon filled in purple">'
-                //     } else {
-                //         starHTML = '<img src="./images/star_off.png" class="carousel-star-icon" alt="star icon filled in grey">'
-                //     }
-                //     starsHTML = starsHTML + starHTML
-                // }
-                // let courseSTR =`
-                // `
-                // let courseHTML = $.parseHTML(courseSTR)
-                // if (i < 5) $(courseHTML[1].children[0]).addClass("active")
-                // $('#latestvids').append(courseHTML)
             }
         })
     });
-}
-
-
-
-
-/* <div class="text-center col-12 col-sm-4 col-md-3 mb-5">
-    <div class="carousel-item active">
-        <img class="w-100" src="./images/thumbnail_4.jpg" alt="smile image">
-        <div class="mx-3">
-            <div class="font-weight-bold text-dark text-left mt-3">
-                Diagonal Smile
-            </div>
-            <div class="text-secondary text-left mt-3 mb-3">
-                Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.
-            </div>
-            <div class="d-flex align-items-center mb-3">
-                <img src="./images/profile_4.jpg" class="rounded-circle mr-3 video-carousel-img-profile" alt="profile image">
-                <div class="purple-text font-weight-bold">Phillip massey</div>
-            </div>
-            <div class="d-flex justify-content-between">
-                <div class="d-flex pt-1">
-                    <img src="./images/star_on.png" class="mr-1 carousel-star-icon" alt="star icon filled in purple">
-                    <img src="./images/star_on.png" class="mr-1 carousel-star-icon" alt="star icon filled in purple">
-                    <img src="./images/star_on.png" class="mr-1 carousel-star-icon" alt="star icon filled in purple">
-                    <img src="./images/star_on.png" class="mr-1 carousel-star-icon" alt="star icon filled in purple">
-                    <img src="./images/star_off.png" class="carousel-star-icon" alt="star icon filled in grey">
-                </div>
-                <div class="purple-text font-weight-bold">
-                    8 min
-                </div>
-            </div>
-        </div>
-    </div>
-</div> */
+});
